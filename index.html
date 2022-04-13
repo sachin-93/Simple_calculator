@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="/simple.css">
+</head>
+<body>
+ <h1 style="font-size:60px; color:blue; text-align: center">Simple Interest Calculator</h1>
+  
+   <div> <label for="fname">Principle Amount:</label>
+     <input type="text" id="Principle" name="fname"  class="reset"><br><br>
+   </div>
+
+   <div>
+     <label for="lname">Rate:</label>
+     <input type="text" id="rate" name="lname" class="reset"><br><br>
+
+   </div>
+
+   <div>
+     <label for="time">Time:</label>
+     <input type="text" id="time" name="time" class="reset"><br><br>
+     <h3 id="result"></h3>
+     <button onclick="calculate()">calculate</button>
+     <button onclick="resetfun()">reset</button>
+   </div>
+
+
+
+</body>
+<script>
+ function calculate()
+ {
+     p = document.getElementById("Principle").value;
+     t = document.getElementById("time").value;
+     r = document.getElementById("rate").value;
+     result = document.getElementById("result");
+     
+     result.innerHTML = "The interest is " + (p*t*r/100);
+ }
+</script>
+
+<script src="cal.js"></script>
+</html>
+
